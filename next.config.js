@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: "dist",
+  output: "export",
   // i18n: {
   //   locales: ["ru", "uz", "en"],
   //   defaultLocale: "ru",
