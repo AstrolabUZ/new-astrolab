@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2e4683;
+    color: white;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
