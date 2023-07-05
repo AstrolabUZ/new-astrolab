@@ -11,15 +11,19 @@ const Footer = () => {
   const nav = [
     {
       title: "О НАС",
-      href: "#about",
+      href: "/about",
     },
     {
       title: "СЕРВИСЫ",
-      href: "#services",
+      href: "/services",
     },
     {
       title: "ПОРТФОЛИО",
-      href: "#portfolio",
+      href: "/portfolio",
+    },
+    {
+      title: "ВАКАНСИИ",
+      href: "/vacancies",
     },
   ];
   const [inputValue, setInputValue] = useState("");
@@ -53,15 +57,6 @@ const Footer = () => {
       sendMessage();
     }
   };
-  const onChangeHref = (href) => {
-    if (window.location.pathname === "/vacancies") {
-      setTimeout(() => {
-        window.location.href = `${href}`;
-      }, 0);
-    } else {
-      window.location.href = `${href}`;
-    }
-  };
   return (
     <>
       <footer className="bg-[#0b0b21] pt-10 mt-20">
@@ -71,17 +66,13 @@ const Footer = () => {
               <div className="flex gap-10">
                 {nav.map((item, index) => (
                   <Link
-                    href={"/"}
-                    onClick={() => onChangeHref(item?.href)}
+                    href={item.href}
                     key={index}
                     className="lg:text-xl text-lg"
                   >
                     {item.title}
                   </Link>
                 ))}
-                <Link href={"/vacancies"} className="lg:text-xl text-lg">
-                  ВАКАНСИИ
-                </Link>
               </div>
               <div className="flex gap-5 text-lg justify-between">
                 <div className="flex items-center gap-3">

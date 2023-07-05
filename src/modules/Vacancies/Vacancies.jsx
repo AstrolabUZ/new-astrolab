@@ -9,7 +9,7 @@ const Vacancies = () => {
   //   document.documentElement.scrollTop = 0;
   // }, []);
   return (
-    <section className="wrapper pt-[120px]" id="vacancies">
+    <section className="wrapper pt-[100px]" id="vacancies">
       <Title title={"ВАКАНСИИ"} />
       <div className="grid lg:grid-cols-3 gap-5 mt-5">
         {data?.vacancies?.map((item) => (

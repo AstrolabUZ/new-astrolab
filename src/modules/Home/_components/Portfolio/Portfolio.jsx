@@ -68,7 +68,7 @@ const Portfolio = () => {
                 />
               ))}
           </div>
-          <div className="grid grid-cols-[1fr_1fr_auto] gap-5">
+          {/* <div className="grid grid-cols-[1fr_1fr_auto] gap-5">
             {filterData
               ?.filter((_, index) => index >= 10)
               ?.map((item) => (
@@ -82,7 +82,7 @@ const Portfolio = () => {
                   key={item?.id}
                 />
               ))}
-          </div>
+          </div> */}
         </div>
       )}
       {widthScreen <= 500 && (

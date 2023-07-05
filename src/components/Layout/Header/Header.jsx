@@ -11,19 +11,22 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-
   const nav = [
     {
       title: "О НАС",
-      href: "/#about",
+      href: "/about",
     },
     {
       title: "СЕРВИСЫ",
-      href: "/#services",
+      href: "/services",
     },
     {
       title: "ПОРТФОЛИО",
-      href: "#portfolio",
+      href: "/portfolio",
+    },
+    {
+      title: "ВАКАНСИИ",
+      href: "/vacancies",
     },
   ];
 
@@ -55,10 +58,11 @@ const Header = () => {
   }
 
   useEffect(() => {
-    if (window.screen.width < 500 || window.location.pathname !== "/" ) {
+    if (window.screen.width < 500 || window.location.pathname !== "/") {
       document.getElementById("header").style.top = "0";
     }
   }, []);
+
   useEffect(() => {
     if (open) {
       window.document.body.style.overflow = "hidden";
@@ -67,19 +71,10 @@ const Header = () => {
     }
   });
 
-  const onChangeHref = (href) => {
-    if (window.location.pathname === "/vacancies") {
-      router.push("/");
-      setTimeout(() => {
-        setOpen(false);
-        window.location.href = `${href}`;
-      }, 0);
-    } else {
-      setOpen(false);
-      window.location.href = `${href}`;
-    }
+  const responChangeLink = (link) => {
+    setOpen((prev) => !prev);
+    router.push(link);
   };
-
   return (
     <>
       <header
@@ -88,17 +83,14 @@ const Header = () => {
       >
         <nav className="wrapper flex items-center justify-between w-full ">
           <Link href={"/"}>
-            <Image src={logo} alt="" width={265} />
+            <Image src={logo} alt="" className={"lg:w-[265px] w-[165px]"} />
           </Link>
           <ul className="items-center gap-5 text-black text-2xl uppercase hidden lg:flex">
             {nav.map((item, index) => (
-              <li key={index} className={"cursor-pointer"}>
-                <p onClick={() => onChangeHref(item?.href)}>{item.title}</p>
+              <li className={"cursor-pointer"} key={index}>
+                <Link href={item?.href}>{item?.title}</Link>
               </li>
             ))}
-            <li className={"cursor-pointer"}>
-              <Link href={"/vacancies"}>ВАКАНСИИ</Link>
-            </li>
           </ul>
           <div className="hamburger lg:hidden block">
             <Hamburger color={"#2e4683"} toggled={open} toggle={setOpen} />
@@ -116,14 +108,11 @@ const Header = () => {
             <ul className="items-center gap-5 text-black text-xl uppercase grid ">
               {nav.map((item, index) => (
                 <li key={index} className={"cursor-pointer"}>
-                  <Link href={"/"} onClick={() => onChangeHref(item?.href)}>
+                  <p onClick={() => responChangeLink(item.href)}>
                     {item.title}
-                  </Link>
+                  </p>
                 </li>
               ))}
-              <li className={"cursor-pointer"} onClick={() => setOpen(false)}>
-                <Link href={"/vacancies"}>ВАКАНСИИ</Link>
-              </li>
             </ul>
           </div>
         </div>
