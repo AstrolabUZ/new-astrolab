@@ -97,32 +97,23 @@ const About = () => {
       <div className="flex flex-col gap-4">
         <Title title={"О НАС"} />
         <p className="lg:text-xl text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis
-          itaque expedita ad eligendi eos impedit tempore molestias illum dolor
-          obcaecati vero placeat voluptatem error soluta maiores nesciunt
-          debitis non molestiae, totam, adipisci consequatur. Adipisci corrupti,
-          ducimus dignissimos blanditiis saepe dolorum similique maiores? Autem
-          porro deleniti in natus quas reiciendis, dolore cum dicta sapiente
-          non, dolorem eius quia similique, fugit iusto hic. Suscipit nulla id
-          molestias, recusandae commodi, officiis beatae necessitatibus unde
-          impedit ipsum incidunt consequuntur. Architecto doloremque magni,
-          soluta ipsum incidunt inventore blanditiis tempora accusamus nemo,
-          natus beatae temporibus exercitationem? Impedit, laborum! Eius
-          aspernatur omnis ratione iste repudiandae consectetur.
+          Мы IT-компания, которая предлагает инновационные решения, помогающие бизнесу добиться успеха. Мы считаем, что технологии должны использоваться, чтобы сделать жизнь людей проще и продуктивнее. Наша миссия состоит в том, чтобы помочь предприятиям достичь своих целей, предоставляя им наилучшие ИТ-решения.
+          Мы были основаны в 2023 году двумя ИТ-специалистами, которые были увлечены использованием технологий, чтобы изменить мир к лучшему. С тех пор мы выросли и стали ведущим поставщиком ИТ-услуг в нашем регионе. Мы стремимся помочь нашим клиентам в достижении их целей, и мы рады видеть, что ждет нашу компанию в будущем.
         </p>
         <p className="lg:text-xl text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis
-          itaque expedita ad eligendi eos impedit tempore molestias illum dolor
-          obcaecati vero placeat voluptatem error soluta maiores nesciunt
-          debitis non molestiae, totam, adipisci consequatur. Adipisci corrupti,
-          ducimus dignissimos blanditiis saepe dolorum similique maiores? Autem
-          porro deleniti in natus quas reiciendis, dolore cum dicta sapiente
-          non, dolorem eius quia similique, fugit iusto hic. Suscipit nulla id
-          molestias, recusandae commodi, officiis beatae necessitatibus unde
-          impedit ipsum incidunt consequuntur. Architecto doloremque magni,
-          soluta ipsum incidunt inventore blanditiis tempora accusamus nemo,
-          natus beatae temporibus exercitationem? Impedit, laborum! Eius
-          aspernatur omnis ratione iste repudiandae consectetur.
+          Что мы делаем
+          Мы предлагаем широкий спектр ИТ-услуг, в том числе:
+          Дизайн и разработка веб-сайта
+          Разработка программного обеспечения
+          ИТ-консалтинг
+          ИТ поддержка
+          Облачные вычисления
+          Информационная безопасность
+          Мы работаем с предприятиями любого размера, от небольших стартапов до крупных предприятий. Мы стремимся предоставлять нашим клиентам наилучший сервис и всегда ищем новые способы помочь им добиться успеха.
+        </p>
+        <p className="lg:text-xl text-sm">
+        Если вы хотите узнать больше о нашей компании или наших услугах, пожалуйста, свяжитесь с нами. Мы будем рады ответить на любые ваши вопросы. <br />
+        Спасибо за интерес к нашей компании!
         </p>
       </div>
       <div className="mt-10">
@@ -223,9 +214,8 @@ const About = () => {
         <div className="grid lg:grid-cols-4 bg-white px-5 lg:py-10 rounded-xl ">
           {data?.map((item) => (
             <div
-              className={`flex items-center justify-center gap-10 ${
-                widthScreen < 500 ? item.classRes : item.class
-              }`}
+              className={`flex items-center justify-center gap-10 ${widthScreen < 500 ? item.classRes : item.class
+                }`}
             >
               <img
                 src={item.img}
