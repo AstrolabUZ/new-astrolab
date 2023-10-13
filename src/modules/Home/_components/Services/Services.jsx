@@ -7,7 +7,7 @@ const Services = () => {
     <section className="wrapper pt-[100px]" id="services">
       <Title title={"СЕРВИСЫ"} />
       <div className="grid lg:grid-cols-3  gap-5 mt-8">
-        {data?.Services?.map((item) => (
+        {data?.services?.map((item) => (
           <ServicesCard
             subtitle={item?.sub_title}
             title={item?.title}
