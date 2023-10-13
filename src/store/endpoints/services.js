@@ -3,12 +3,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const Services = createApi({
   reducerPath: `Services`,
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://astrolab.uz/v1/",
+    baseUrl: "http://95.130.227.6:2023/v1",
   }),
   endpoints: (build) => ({
     getAllServices: build.query({
       query: () => ({
-        url: `/services`,
+        url: `/get-all-service`,
         method: `GET`,
       }),
     }),

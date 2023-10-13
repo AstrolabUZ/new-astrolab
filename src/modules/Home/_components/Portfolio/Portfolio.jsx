@@ -14,7 +14,7 @@ const Portfolio = () => {
     }
   }, []);
 
-  data?.Portfolio?.map((item, index) => {
+  data?.portfolio?.map((item, index) => {
     let newObj = JSON.parse(JSON.stringify(item));
     if (index === 0) {
       newObj["className"] = "row-start-1 row-end-3 w-[600px] h-[400px]";
