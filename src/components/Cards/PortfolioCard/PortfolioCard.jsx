@@ -12,7 +12,7 @@ const PortfolioCard = ({ className, title, img, aosType, type, link }) => {
         data-aos-once="true"
       >
         <ImageComponent
-          imageUrl={"http://" + img}
+          imageUrl={"https://" + img}
           styles={"absolute -z-[4] inset-0 w-full h-full object-cover"}
         />
 
