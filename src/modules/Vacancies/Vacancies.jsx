@@ -8,11 +8,21 @@ const Vacancies = () => {
   // useEffect(() => {
   //   document.documentElement.scrollTop = 0;
   // }, []);
+
+  // const data = [
+  //   {
+  //     busy_schedule: "Полный рабочий день",
+  //     requirements: "HTML, CSS, SCSS, JavaScript, React",
+  //     vacancy_name: "Frontend developer",
+  //     wage: "На стажировку",
+  //   },
+  // ];
+  console.log(data, "data");
   return (
     <section className="wrapper pt-[100px]" id="vacancies">
       <Title title={"ВАКАНСИИ"} />
       <div className="grid lg:grid-cols-3 gap-5 mt-5">
-        {data?.vacancies?.map((item) => (
+        {data?.vacancy.map((item) => (
           <VacanciesCard data={item} key={item?.id} />
         ))}
       </div>

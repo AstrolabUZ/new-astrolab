@@ -21,7 +21,7 @@ const VacanciesCard = ({ data }) => {
         data-aos-once="true"
       >
         <h6 className="text-3xl font-bold text-[#466ACC]">
-          {data?.vacany_name}
+          {data?.vacancy_name}
         </h6>
         <p>
           <b>График занятости:</b> {data?.busy_schedule}
