@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 const Portfolio = () => {
   const { data } = useGetAllPortfolioQuery();
-  console.log(data, "Data");
   const [widthScreen, setWidthScreen] = useState();
   let filterData = [];
   useEffect(() => {
@@ -92,7 +91,7 @@ const Portfolio = () => {
       )}
       {widthScreen <= 500 && (
         <div className="mt-8 grid grid-cols-[1fr_1fr] gap-5">
-          {data?.Portfolio?.map((item) => (
+          {data?.portfolio?.map((item) => (
             <PortfolioCard
               title={item?.title}
               img={item?.image_url}
