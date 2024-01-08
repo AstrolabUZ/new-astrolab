@@ -30,7 +30,6 @@ const Portfolio = () => {
     }
     filterData?.push(newObj);
   });
-
   return (
     <section className="wrapper pt-[100px]" id="portfolio">
       <div className="flex justify-between items-center w-full">
@@ -87,7 +86,7 @@ const Portfolio = () => {
       )}
       {widthScreen <= 500 && (
         <div className="mt-8 grid grid-cols-[1fr_1fr] gap-5">
-          {data?.Portfolio?.map((item) => (
+          {data?.portfolio?.map((item) => (
             <PortfolioCard
               title={item?.title}
               img={item?.image_url}
